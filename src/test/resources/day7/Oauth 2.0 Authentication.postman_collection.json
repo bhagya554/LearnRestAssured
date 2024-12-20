@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "f3f45de5-d130-42f6-adb2-1dc10f4a04d8",
+		"name": "Oauth 2.0 Authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32348070",
+		"_collection_link": "https://cloudy-water-362442.postman.co/workspace/1b72b4fc-58a3-4d04-b858-d7fecd047c11/collection/32348070-f3f45de5-d130-42f6-adb2-1dc10f4a04d8?action=share&source=collection_link&creator=32348070"
+	},
+	"item": [
+		{
+			"name": "Step 1: Hit GET request with URL",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Step 2: Send a POST request with Client_id, Client_Secret and Code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://github.com/login/oauth/access_token?client_id=Ov23ctDEOmZla3P7Nc5s&client_secret=f745308256c5a196b26723d046253c551b6437a0&code=80ab1028a8905b8d06de",
+					"protocol": "https",
+					"host": [
+						"github",
+						"com"
+					],
+					"path": [
+						"login",
+						"oauth",
+						"access_token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "Ov23ctDEOmZla3P7Nc5s"
+						},
+						{
+							"key": "client_secret",
+							"value": "f745308256c5a196b26723d046253c551b6437a0"
+						},
+						{
+							"key": "code",
+							"value": "80ab1028a8905b8d06de"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Step 3: Use the access token to access the API – List Specific user",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.github.com/users/mojombo",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"users",
+						"mojombo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Step 3: Use the access token to access the API – All users",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.github.com/users",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
