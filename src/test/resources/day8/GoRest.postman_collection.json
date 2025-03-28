@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "1a2d9635-ba1c-4d28-b713-900164972394",
+		"name": "GoRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32348070",
+		"_collection_link": "https://cloudy-water-362442.postman.co/workspace/WeatherWorkspace~dc31cb93-1b0d-4a3f-9f73-1c0438ca7912/collection/32348070-1a2d9635-ba1c-4d28-b713-900164972394?action=share&source=collection_link&creator=32348070"
+	},
+	"item": [
+		{
+			"name": "Step 1: Create User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6ab40340708103e96926628a757d95a7ea09689cbeeed8e794da466d7834cedf",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n    \"name\": \"Ghanshyam r\",\r\n    \"email\": \"ghanshyam_pa@thompson-okon.test\",\r\n    \"gender\": \"female\",\r\n    \"status\": \"inactive\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Step 2:GET user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6ab40340708103e96926628a757d95a7ea09689cbeeed8e794da466d7834cedf",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users/7595472",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users",
+						"7595472"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Step 3: PATCH/PUT User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6ab40340708103e96926628a757d95a7ea09689cbeeed8e794da466d7834cedf",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jakson\",\r\n    \"email\": \"kim.veum@gmail.com\",\r\n    \"gender\": \"male\",\r\n    \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users/7595472",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users",
+						"7595472"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Step 4: Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6ab40340708103e96926628a757d95a7ea09689cbeeed8e794da466d7834cedf",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users/7595472",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users",
+						"7595472"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

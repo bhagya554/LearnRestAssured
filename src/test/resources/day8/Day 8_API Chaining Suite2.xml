@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Day 8_API Chaining Suite">
+   <!-- Day 8_API Chaining Test -->
+   <test name="Create user Test">
+    <classes>
+      <class name="day8.CreateUser"/>
+    </classes>
+  </test>
+   
+   <test name="Get user Test">
+    <classes>
+      
+      <class name="day8.GetUser"/>
+     
+    </classes>
+  </test>
+   
+   <test name="Update user Test">
+    <classes>
+     
+      <class name="day8.UpdateUser"/>
+
+    </classes>
+  </test>
+  
+  <test name="Delete User Test">
+    <classes>
+    
+      <class name="day8.DeleteUser"/>
+    </classes>
+  </test>
+</suite> <!-- Day 8_API Chaining Suite -->
