@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 
 public class FileUploadAndDownload {
-	@Test
+	@Test(priority=1)
 	public void singleFileUpload() {
 		File myFile = new File("./src/test/resources/day5/Test 1.txt");
 		given()
@@ -21,7 +21,7 @@ public class FileUploadAndDownload {
 			.body("fileName", equalTo("Test 1.txt"));
 	}
 	
-	@Test
+	//@Test
 	public void multipleFileUpload() {
 		File myFile1 = new File("./src/test/resources/day5/Test 1.txt");
 		File myFile2 = new File("./src/test/resources/day5/Test 2.txt");
@@ -42,5 +42,14 @@ public class FileUploadAndDownload {
 			.log().all();
 	}
 	
+	@Test(priority=2)
+	public void fileDownload() {
+		given()
+		.when()
+			.get("http://localhost:8080/downloadFile/Test 1.txt")
+		.then()
+			.statusCode(200)
+			.log().body();
+	}
 
 }

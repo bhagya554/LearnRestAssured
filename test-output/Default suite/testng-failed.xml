@@ -5,7 +5,7 @@
     <classes>
       <class name="day5.FileUploadAndDownload">
         <methods>
-          <include name="multipleFileUpload"/>
+          <include name="fileDownload"/>
         </methods>
       </class> <!-- day5.FileUploadAndDownload -->
     </classes>
