@@ -21,7 +21,7 @@ public class FileUploadAndDownload {
 			.body("fileName", equalTo("Test 1.txt"));
 	}
 	
-	//@Test
+	@Test
 	public void multipleFileUpload() {
 		File myFile1 = new File("./src/test/resources/day5/Test 1.txt");
 		File myFile2 = new File("./src/test/resources/day5/Test 2.txt");
